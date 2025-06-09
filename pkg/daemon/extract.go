@@ -2,12 +2,13 @@ package daemon
 
 import (
 	"fmt"
-	ign3types "github.com/coreos/ignition/v2/config/v3_2/types"
-	mcfgv1 "github.com/openshift/machine-config-operator/pkg/apis/machineconfiguration.openshift.io/v1"
+	"os"
+
+	ign3types "github.com/coreos/ignition/v2/config/v3_5/types"
+	mcfgv1 "github.com/openshift/api/machineconfiguration/v1"
 	ctrlcommon "github.com/openshift/machine-config-operator/pkg/controller/common"
 	k8sfake "k8s.io/client-go/kubernetes/fake"
 	"k8s.io/klog/v2"
-	"os"
 )
 
 func newExtraceMockDaemon() Daemon {
